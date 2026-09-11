@@ -53,21 +53,46 @@ window.addEventListener("load", () => {
   }
 });
 
-// Hero 2x2 Nav Cards Morph Interaction
+// Hero 2x2 Nav Cards Morph Interaction (Desktop Hover + Mobile Double-Tap)
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("heroCardsGrid");
   if (!grid) return;
 
   const cards = grid.querySelectorAll(".nav-card");
+
   cards.forEach(card => {
+    // Desktop mouse hover
     card.addEventListener("mouseenter", () => {
       grid.classList.add("has-active");
+      cards.forEach(c => {
+        if (c !== card) c.classList.remove("is-expanded");
+      });
       card.classList.add("is-expanded");
     });
+
     card.addEventListener("mouseleave", () => {
       grid.classList.remove("has-active");
       card.classList.remove("is-expanded");
     });
+
+    // Click / Touch tap handler:
+    // First tap expands; second tap on expanded card directs to section
+    card.addEventListener("click", (e) => {
+      if (!card.classList.contains("is-expanded")) {
+        e.preventDefault();
+        grid.classList.add("has-active");
+        cards.forEach(c => c.classList.remove("is-expanded"));
+        card.classList.add("is-expanded");
+      }
+    });
+  });
+
+  // Tap outside grid resets to 2x2 collapsed state
+  document.addEventListener("click", (e) => {
+    if (!grid.contains(e.target)) {
+      grid.classList.remove("has-active");
+      cards.forEach(c => c.classList.remove("is-expanded"));
+    }
   });
 });
 
