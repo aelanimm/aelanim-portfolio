@@ -1,0 +1,53 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6%;
+  background: var(--off-white); 
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--brown);
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+nav.scrolled { box-shadow: 0 4px 24px rgba(62,44,35,0.1); }
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--brown);
+  letter-spacing: 0.02em;
+}
+
+.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+
+.nav-links a {
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--brown-lt);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color .25s;
+  cursor: pointer !important;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 2px;
+  background: var(--teal);
+  transition: width .3s;
+}
+
+.nav-links a:hover { color: var(--brown); }
+.nav-links a:hover::after { width: 100%; }
+
+.layout { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.layout span { width: 24px; height: 2px; background: var(--brown); border-radius: 2px; transition: .3s; }

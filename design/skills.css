@@ -1,0 +1,300 @@
+/* Skills Section - Playful Design */
+#skills {
+  background: var(--off-white);
+  padding: 6rem 6%;
+  position: relative;
+  overflow: hidden;
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  right: -80px;
+  top: 5%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--yellow) 4px, transparent 4px);
+  background-size: 30px 30px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#skills::after {
+  content: '';
+  position: absolute;
+  left: 5%;
+  bottom: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, var(--teal) 3px, transparent 3px);
+  background-size: 25px 25px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skills-content {
+  max-width: 1200px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.8rem;
+}
+
+#skills .section-label {
+  color: var(--brown);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--brown);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.divider {
+  width: 48px;
+  height: 4px;
+  background: var(--red);
+  border-radius: 2px;
+  margin-bottom: 3.5rem;
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(135, 182, 188, 0.08);
+  border-radius: 1.2rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--teal);
+  background: rgba(135, 182, 188, 0.15);
+  box-shadow: 0 12px 24px rgba(135, 182, 188, 0.15);
+}
+
+.tool-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+
+.tool-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brown);
+  text-align: center;
+}
+
+/* Skills Container */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.skills-column {
+  position: relative;
+}
+
+.skills-column::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  background: currentColor;
+  opacity: 0.1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.skills-column:nth-child(1)::before {
+  background: var(--red);
+}
+
+.skills-column:nth-child(2)::before {
+  background: var(--yellow);
+}
+
+.skills-column:nth-child(3)::before {
+  background: var(--teal);
+}
+
+.skills-category-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--brown);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge Colors - Custom Palette */
+.badge-react {
+  background: linear-gradient(135deg, rgba(135, 182, 188, 0.25) 0%, rgba(135, 182, 188, 0.1) 100%);
+  color: #3a6b75;
+  border: 1px solid rgba(135, 182, 188, 0.4);
+}
+
+.badge-html {
+  background: linear-gradient(135deg, rgba(246, 240, 159, 0.3) 0%, rgba(246, 240, 159, 0.15) 100%);
+  color: #9a8c00;
+  border: 1px solid rgba(246, 240, 159, 0.5);
+}
+
+.badge-javascript {
+  background: linear-gradient(135deg, rgba(179, 86, 86, 0.25) 0%, rgba(179, 86, 86, 0.1) 100%);
+  color: #6b2d2d;
+  border: 1px solid rgba(179, 86, 86, 0.4);
+}
+
+.badge-node {
+  background: linear-gradient(135deg, rgba(62, 44, 35, 0.25) 0%, rgba(62, 44, 35, 0.1) 100%);
+  color: #2a1e17;
+  border: 1px solid rgba(62, 44, 35, 0.4);
+}
+
+.badge-python {
+  background: linear-gradient(135deg, rgba(135, 182, 188, 0.25) 0%, rgba(135, 182, 188, 0.1) 100%);
+  color: #3a6b75;
+  border: 1px solid rgba(135, 182, 188, 0.4);
+}
+
+.badge-database {
+  background: linear-gradient(135deg, rgba(246, 240, 159, 0.3) 0%, rgba(246, 240, 159, 0.15) 100%);
+  color: #9a8c00;
+  border: 1px solid rgba(246, 240, 159, 0.5);
+}
+
+.badge-api {
+  background: linear-gradient(135deg, rgba(179, 86, 86, 0.25) 0%, rgba(179, 86, 86, 0.1) 100%);
+  color: #6b2d2d;
+  border: 1px solid rgba(179, 86, 86, 0.4);
+}
+
+.badge-figma {
+  background: linear-gradient(135deg, rgba(62, 44, 35, 0.25) 0%, rgba(62, 44, 35, 0.1) 100%);
+  color: #2a1e17;
+  border: 1px solid rgba(62, 44, 35, 0.4);
+}
+
+.badge-ui {
+  background: linear-gradient(135deg, rgba(135, 182, 188, 0.25) 0%, rgba(135, 182, 188, 0.1) 100%);
+  color: #3a6b75;
+  border: 1px solid rgba(135, 182, 188, 0.4);
+}
+
+.badge-graphic {
+  background: linear-gradient(135deg, rgba(246, 240, 159, 0.3) 0%, rgba(246, 240, 159, 0.15) 100%);
+  color: #9a8c00;
+  border: 1px solid rgba(246, 240, 159, 0.5);
+}
+
+.badge-canva {
+  background: linear-gradient(135deg, rgba(179, 86, 86, 0.25) 0%, rgba(179, 86, 86, 0.1) 100%);
+  color: #6b2d2d;
+  border: 1px solid rgba(179, 86, 86, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #skills {
+    padding: 4rem 4%;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #skills {
+    padding: 2.5rem 4%;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1rem;
+  }
+
+  .tool-card {
+    padding: 1rem;
+  }
+
+  .tool-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skills-category-title {
+    font-size: 1.2rem;
+  }
+
+  .skill-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+}

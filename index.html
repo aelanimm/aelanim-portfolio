@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="design/global.css">
+    <link rel="stylesheet" type="text/css" href="design/navbar.css">
+    <link rel="stylesheet" type="text/css" href="design/hero.css">
+    <link rel="stylesheet" type="text/css" href="design/about-card.css">
+    <link rel="stylesheet" type="text/css" href="design/experience.css">
+    <link rel="stylesheet" type="text/css" href="design/skills.css">
+    <link rel="stylesheet" type="text/css" href="design/contact.css">
+    <link rel="stylesheet" type="text/css" href="design/mobile.css">
+    <script>
+      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="nav-logo">Ayla.</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="layout" id="layout" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg-circle c1"></div>
+    <div class="hero-bg-circle c2"></div>
+    <div class="hero-bg-circle c3"></div>
+    
+    <div class="hero-floating-nav">
+      <a href="#about" class="float-link link-about">
+        Get to know me and<br>what I do.
+        <div class="arrow arrow-about"></div>
+      </a>
+      <a href="#experience" class="float-link link-experience">
+        Explore my<br>background and<br>experience.
+        <div class="arrow arrow-experience"></div>
+      </a>
+      <a href="#contact" class="float-link link-contact">
+        I'd love to connect—here's how to reach me.
+        <div class="arrow arrow-contact"></div>
+      </a>
+      <a href="#skills" class="float-link link-skills">
+        Tools and skills I use.
+        <div class="arrow arrow-skills"></div>
+      </a>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-tag">✦ Welcome to my portfolio</div>
+      <h1 class="hero-name">Hello, I'm<br/><em>Ayla</em></h1>
+      <p class="hero-sub">Passionate about graphic design</p>
+      
+      <div class="hero-actions mobile-only-actions">
+        <a href="#about" class="btn btn-primary">Get to know me</a>
+        <a href="#contact" class="btn btn-outline">Say hello</a>
+        <a href="#skills" class="btn btn-secondary">Know about the tools I use and skills</a>
+        <a href="#experience" class="btn btn-outline">Learn about my journey</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-content reveal">
+      <h2 class="about-title">About me</h2>
+      <div class="about-tags">
+        <span class="tag tag-primary">IT Student</span>
+        <span class="tag tag-secondary">Graphic Designer</span>
+        <span class="tag tag-accent">Programmer</span>
+
+      </div>
+
+      <div class="flip-card-container">
+        <div class="flip-card-inner">
+          
+          <!-- Front of Card -->
+          <div class="flip-card-front">
+            <div class="card-grid">
+              <div class="card-section image-section">
+                <div class="image-frame">
+                  <div class="card-image"></div>
+                </div>
+                <div class="card-links">
+                  <a href="#skills" class="card-link">My skills</a>
+                  <a href="#experience" class="card-link">Experience</a>
+                </div>
+              </div>
+
+              <div class="card-section content-section">
+                <h3 class="section-heading">WHO I AM</h3>
+                <p class="section-text">Hi there! I'm Ayla, an IT student who absolutely loves mixing creativity with technology. For me tech is the perfect canvas for bringing ideas to life. This excites me to dive into different spaces and connect with others who share the same passion.</p>
+                <p class="section-text">Outside of academics, you can find me volunteering for community initiatives in our IT organization. Being part of multimedia committee has been awesome experience, which helped me to grow into a team player. This allowed me to bring my creative spark to our club projects and events.</p>
+                <p class="section-text">I've gained practical experience through capstone projects and client work. As an Information Technology Student, my career objective is seeking an entry-level Devops Engineer to leverage strong knowledge of cloud infrastructure and CI/CD Pipelines to make an efficient software deployment</p>
+              </div>
+
+              <div class="card-section accent-section">
+                <button class="flip-btn" onclick="toggleFlip()">More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Back of Card -->
+          <div class="flip-card-back">
+            <div class="learning-reflection">
+              <h3>Learning Reflection</h3>
+              <p>
+                As for my reflection in this course, it was deeply a meaningful challenge to make a webpage of your own. I still remember the time listening to our professor explain the basic information of HTML and CSS. Now, we've gone from those everyday lecture and laboratory examples to actually implementing a real, functional website coming from my idea.
+              </p>
+              <p>
+                During development, it feels hard to start at the part where all you can see from your website is blank. With the help of AI tools and Design Layout tools, I was able to execute the design I wanted.
+              </p>
+              <p>
+                The difficult part of the website was figuring out how we were going to make the website responsive. I would try to fix a layout for the mobile view, and suddenly my interactive 3D flip cards on the desktop view would stretch into weird shapes because of old styling rules. To fix this challenge, I was able to clean the styling of my website by separating each section into their designated file: one for the navbar, one for the hero section, one for the ID cards, and a separate one just for the mobile view.
+              </p>
+              <p>
+                This problem in the styling is only like the peak of an iceberg because I found out that my website couldn't catch data yet. That's why I implemented a feature wherein the user who will contact me or send a message to my email will be stored in the database. It was quite a headache since I'm still not highly skilled in the backend part. By fixing this problem, I had to stop guessing and actually figure out why my code was failing silently. At first, my JavaScript was swallowing the errors in the background, so I wasn't even getting a warning. I changed my code to print the PHP responses directly into the browser console and this eventually showed me the problem. I was making two big rookie mistakes; first was trying to run my files directly from my hard drive instead of using a local server, and secondly, my database connection was using the default port 3306 while my local MySQL server was running on port 3307. Once I moved the project into my server folder, ran it through localhost, and updated my db-config.php file to the correct port, the connection finally clicked and the data flowed perfectly into my contact_messages table.
+              </p>
+              <p>
+                Overall, one of the biggest things I realized is just how much patience you need to become a programmer. This feeling isn't exactly new to me, since I experienced similar pressure during our capstone project. However, going through it again made me realize that the amount of effort you put in directly impacts the quality of your output. No matter how hard a mistake is to find, your effort will eventually pay off.
+              </p>
+            </div>
+            <button class="flip-btn" onclick="toggleFlip()">Back</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="experience-content reveal">
+      <div class="section-label">MY ACADEMIC BACKGROUND</div>
+      <h2 class="section-title">Experiences</h2>
+      <div class="divider"></div>
+
+      <div class="experience-grid">
+        <div class="experience-card leadership">
+          <span class="card-badge badge-leadership">Leadership</span>
+          <h3 class="card-title">Vice President</h3>
+          <p class="card-org">BYTES Organization</p>
+          <p class="card-description">Led and coordinated club activities, managed a team of officers, and organized events.</p>
+          <span class="card-date">2025 – 2026</span>
+        </div>
+
+        <div class="experience-card creative">
+          <span class="card-badge badge-creative">Creative</span>
+          <h3 class="card-title">Multimedia Head</h3>
+          <p class="card-org">BYTES Organization</p>
+          <p class="card-description">Currently handling all multimedia content for the organization—producing social media materials that represent our community's story and events.</p>
+          <span class="card-date">2026 – Present</span>
+        </div>
+
+        <div class="experience-card academic">
+          <span class="card-badge badge-academic">Academic</span>
+          <h3 class="card-title">IT Student</h3>
+          <p class="card-org">STI College Fairview</p>
+          <p class="card-description">Currently pursuing a degree while balancing organization responsibilities.  I am applying knowledge I learned in a classroom to real-world creative and collaborative projects, developing both technical and interpersonal skills.</p>
+          <span class="card-date">2023 – Present</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills-content reveal">
+      <div class="section-label">WHAT I BRING</div>
+      <h2 class="section-title">Tools & Skills</h2>
+      <div class="divider"></div>
+
+      <!-- Tools Grid -->
+      <div class="tools-grid">
+        <div class="tool-card">
+          <img src="assets/canva.jpg" alt="Canva" class="tool-icon">
+          <p class="tool-name">Canva</p>
+        </div>
+        <div class="tool-card">
+          <img src="assets/figma.jpg" alt="Figma" class="tool-icon">
+          <p class="tool-name">Figma</p>
+        </div>
+        <div class="tool-card">
+          <img src="assets/sketchbook.jpg" alt="Sketchbook" class="tool-icon">
+          <p class="tool-name">Sketchbook</p>
+        </div>
+        <div class="tool-card">
+          <img src="assets/intellij.jpg" alt="IntelliJ" class="tool-icon">
+          <p class="tool-name">IntelliJ</p>
+        </div>
+        <div class="tool-card">
+          <img src="assets/vs.jpg" alt="Visual Studio" class="tool-icon">
+          <p class="tool-name">Visual Studio</p>
+        </div>
+      </div>
+
+      <!-- Skills Categories -->
+      <div class="skills-container">
+        <div class="skills-column">
+          <h3 class="skills-category-title">Frontend</h3>
+          <div class="skill-badges">
+            <span class="skill-badge badge-react">React</span>
+            <span class="skill-badge badge-html">HTML/CSS</span>
+            <span class="skill-badge badge-javascript">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skills-column">
+          <h3 class="skills-category-title">Backend</h3>
+          <div class="skill-badges">
+            <span class="skill-badge badge-node">Node.js</span>
+            <span class="skill-badge badge-python">Python</span>
+            <span class="skill-badge badge-database">Databases</span>
+            <span class="skill-badge badge-api">REST API</span>
+          </div>
+        </div>
+
+        <div class="skills-column">
+          <h3 class="skills-category-title">Design</h3>
+          <div class="skill-badges">
+            <span class="skill-badge badge-figma">Figma</span>
+            <span class="skill-badge badge-ui">UI/UX</span>
+            <span class="skill-badge badge-graphic">Graphics</span>
+            <span class="skill-badge badge-canva">Canva</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-content reveal">
+      <div class="section-label">GET IN TOUCH</div>
+      <h2 class="contact-title">Let's connect</h2>
+      <div class="contact-divider"></div>
+
+      <p class="contact-description">Whether it's a collaboration, a question, or just saying hi — my inbox is always open. Feel free to reach out!</p>
+
+      <!-- Contact Links -->
+      <div class="contact-links">
+        <div class="contact-link-item">
+          <div class="link-icon">✉</div>
+          <a href="mailto:aylaponce29@gmail.com" class="contact-link">aylaponce29@gmail.com</a>
+        </div>
+        <div class="contact-link-item">
+          <div class="link-icon">🪪</div>
+          <a href="https://www.linkedin.com/in/ayla-ponce-70b348375/" class="contact-link">linkedin.com/in/ayla-ponce</a>
+        </div>
+      </div>
+
+      <!-- Success Message -->
+      <div data-fs-success>Just received it! I'll message you back as soon as I see your message</div>
+
+      <!-- Error Message -->
+      <div data-fs-error></div>
+
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xdajljao" method="POST">
+        <div class="form-group">
+          <label for="firstName" class="form-label">FIRST NAME</label>
+          <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Juan" data-fs-field required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="form-label">LAST NAME</label>
+          <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Dela Cruz" data-fs-field required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">EMAIL</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="juan@email.com" data-fs-field required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">MESSAGE</label>
+          <textarea id="message" name="message" class="form-textarea" placeholder="Hi! I'd love to work with you..." data-fs-field required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn" data-fs-submit-btn>Send Message </button>
+      </form>
+    </div>
+  </section>
+
+  <div id="floating-menu" class="floating-menu hidden">
+    <div class="menu-items">
+      <a href="#about" class="menu-item">About Me</a>
+      <a href="#skills" class="menu-item">Skills</a>
+      <a href="#experience" class="menu-item">Experience</a>
+      <a href="#contact" class="menu-item">Contact</a>
+    </div>
+    
+    <button id="menu-toggle" class="menu-toggle">
+      <span class="hamburger">MENU</span>
+      <span class="close-icon">CLOSE</span>
+    </button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

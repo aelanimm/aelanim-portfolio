@@ -1,0 +1,160 @@
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 6% 5rem;
+  position: relative;
+  background: var(--brown);
+  overflow: hidden;
+}
+
+.hero-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: .18;
+}
+.hero-bg-circle.c1 { width: 500px; height: 500px; background: var(--teal); top: -100px; right: -80px; }
+.hero-bg-circle.c2 { width: 300px; height: 300px; background: var(--yellow); bottom: -60px; left: 10%; }
+.hero-bg-circle.c3 { width: 180px; height: 180px; background: var(--red); bottom: 20%; right: 15%; }
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--brown);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .35rem .9rem;
+  border-radius: 2rem;
+  margin-bottom: 1.6rem;
+  animation: fadeUp .6s ease both;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  line-height: 1.05;
+  color: var(--off-white);
+  margin-bottom: 1.2rem;
+  animation: fadeUp .6s .15s ease both;
+}
+.hero-name em { font-style: italic; color: var(--yellow); }
+
+.hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(250,248,243,.65);
+  max-width: 520px;
+  margin-bottom: 2.4rem;
+  animation: fadeUp .6s .3s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp .6s .45s ease both;
+}
+
+.hero-name, .hero-sub, .hero-tag{
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.hero-name:hover, .hero-sub:hover, .hero-tag:hover { transform: translateY(-5px); }
+
+/* Hero Floating Map */
+@media (min-width: 861px) {
+  #navbar .nav-links { display: none !important; }
+  .mobile-only-actions { display: none !important; }
+}
+
+.hero-floating-nav {
+  position: absolute;
+  inset: 0; 
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.float-link {
+  position: absolute;
+  pointer-events: auto !important; 
+  z-index: 50; 
+  cursor: pointer !important;
+  color: var(--off-white);
+  font-family: 'DM Sans', sans-serif; 
+  font-weight: 700; 
+  font-size: 1.4rem; 
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.3;
+  transition: color 0.3s, transform 0.3s;
+}
+.float-link:hover { color: var(--yellow); transform: scale(1.05); }
+
+.link-about      { top: 22%; left: 12%; }
+.link-experience { top: 22%; right: 10%; }
+.link-contact    { bottom: 20%; left: 8%; text-align: right; }
+.link-skills     { bottom: 25%; right: 10%; }
+
+.arrow {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-about      { background-image: url('../assets/1.png'); width: 100px; height: 140px; top: 100%; left: 40%; }
+.arrow-experience { background-image: url('../assets/2.png'); width: 160px; height: 130px; top: 90%; right: 70%; }
+.arrow-contact    { background-image: url('../assets/3.png'); width: 200px; height: 120px; top: 40%; left: 105%; }
+.arrow-skills     { background-image: url('../assets/4.png'); width: 180px; height: 140px; bottom: -20%; right: 105%; }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .link-about      { top: 18%; left: 8%; font-size: 1.1rem; }
+  .link-experience { top: 18%; right: 8%; font-size: 1.1rem; }
+  .link-contact    { bottom: 18%; left: 5%; font-size: 1.1rem; }
+  .link-skills     { bottom: 22%; right: 8%; font-size: 1.1rem; }
+  
+  .arrow-about      { width: 80px; height: 110px; }
+  .arrow-experience { width: 130px; height: 100px; }
+  .arrow-contact    { width: 160px; height: 95px; }
+  .arrow-skills     { width: 140px; height: 110px; }
+}
+
+@media (max-width: 1024px) {
+  .link-about      { top: 15%; left: 6%; font-size: 1rem; }
+  .link-experience { top: 15%; right: 6%; font-size: 1rem; }
+  .link-contact    { bottom: 16%; left: 4%; font-size: 1rem; }
+  .link-skills     { bottom: 20%; right: 6%; font-size: 1rem; }
+  
+  .arrow-about      { width: 70px; height: 95px; }
+  .arrow-experience { width: 110px; height: 85px; }
+  .arrow-contact    { width: 130px; height: 80px; }
+  .arrow-skills     { width: 115px; height: 95px; }
+}
+
+@media (max-width: 900px) {
+  #hero { padding: 6rem 3% 4rem; }
+  .link-about      { top: 12%; left: 5%; font-size: 0.95rem; }
+  .link-experience { top: 12%; right: 5%; font-size: 0.95rem; }
+  .link-contact    { bottom: 14%; left: 3%; font-size: 0.95rem; }
+  .link-skills     { bottom: 18%; right: 5%; font-size: 0.95rem; }
+  
+  .arrow-about      { width: 60px; height: 80px; }
+  .arrow-experience { width: 90px; height: 70px; }
+  .arrow-contact    { width: 105px; height: 65px; }
+  .arrow-skills     { width: 95px; height: 80px; }
+}
+
