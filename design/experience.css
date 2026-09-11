@@ -141,18 +141,18 @@
 }
 
 .badge-leadership {
-  background: rgba(179, 86, 86, 0.12);
-  color: var(--red-dk);
+  background: var(--lavender);
+  color: #723485;
 }
 
 .badge-creative {
-  background: rgba(135, 182, 188, 0.12);
-  color: var(--teal-dk);
+  background: var(--marigold-lt);
+  color: #7a4f00;
 }
 
 .badge-academic {
-  background: rgba(135, 182, 188, 0.1);
-  color: var(--teal-dk);
+  background: var(--periwinkle-lt);
+  color: #3b49ab;
 }
 
 /* Card Content */

@@ -185,9 +185,9 @@ span[data-fs-error] {
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  background: rgba(250, 248, 243, 0.15);
-  border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(135, 182, 188, 0.1);
+  background: rgba(251, 253, 247, 0.15);
+  border-color: var(--periwinkle);
+  box-shadow: 0 0 0 3px rgba(174, 183, 255, 0.2);
 }
 
 .form-textarea {
@@ -198,8 +198,8 @@ span[data-fs-error] {
 
 /* Send Button */
 .send-btn {
-  background: var(--red);
-  color: var(--off-white);
+  background: var(--marigold);
+  color: var(--brown);
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.6rem;
@@ -213,9 +213,9 @@ span[data-fs-error] {
 }
 
 .send-btn:hover {
-  background: #a34949;
+  background: var(--marigold-dk);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(179, 86, 86, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 188, 84, 0.35);
 }
 
 .send-btn:active {

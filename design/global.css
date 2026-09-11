@@ -1,14 +1,34 @@
 :root {
-  --teal: #87B6BC;
-  --teal-lt: #c2d9dc;
-  --teal-dk: #4e8c93;
-  --yellow: #F6F09F;
-  --red: #B35656;
-  --red-dk: #8a3e3e;
-  --brown: #3E2C23;
-  --brown-lt:#5c4336;
-  --off-white: #faf8f3;
-  --text: #2a1e17;
+  /* New Palette */
+  --olive: #C2B500;
+  --olive-lt: #e3dc75;
+  --olive-dk: #988e00;
+
+  --lavender: #F5D6FF;
+  --lavender-lt: #fbf0ff;
+  --lavender-dk: #d8aef0;
+
+  --periwinkle: #AEB7FF;
+  --periwinkle-lt: #d9deff;
+  --periwinkle-dk: #7d8be8;
+
+  --marigold: #FFBC54;
+  --marigold-lt: #ffe0a3;
+  --marigold-dk: #df9824;
+
+  --off-white: #fffceb;
+  --bg-main: #fffceb;
+  --brown: #352900;
+  --brown-lt: #544300;
+  --text: #352900;
+
+  /* Component mappings */
+  --teal: var(--periwinkle);
+  --teal-lt: var(--periwinkle-lt);
+  --teal-dk: var(--periwinkle-dk);
+  --yellow: var(--marigold);
+  --red: var(--olive);
+  --red-dk: var(--olive-dk);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +36,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--off-white);
+  background: var(--bg-main);
   color: var(--text);
   overflow-x: hidden;
 }

@@ -40,6 +40,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Cute Intro Curtain Dismissal
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro-curtain");
+  if (intro) {
+    setTimeout(() => {
+      intro.classList.add("loaded");
+      setTimeout(() => {
+        intro.style.display = "none";
+      }, 1400);
+    }, 2400);
+  }
+});
+
+// Hero 2x2 Nav Cards Morph Interaction
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("heroCardsGrid");
+  if (!grid) return;
+
+  const cards = grid.querySelectorAll(".nav-card");
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      grid.classList.add("has-active");
+      card.classList.add("is-expanded");
+    });
+    card.addEventListener("mouseleave", () => {
+      grid.classList.remove("has-active");
+      card.classList.remove("is-expanded");
+    });
+  });
+});
+
 // 3D Flip Card Toggle
 function syncFlipCardHeight() {
   const cardInner = document.querySelector('.flip-card-inner');

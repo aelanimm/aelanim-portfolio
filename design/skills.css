@@ -182,70 +182,28 @@
 }
 
 /* Badge Colors - Custom Palette */
-.badge-react {
-  background: linear-gradient(135deg, rgba(135, 182, 188, 0.25) 0%, rgba(135, 182, 188, 0.1) 100%);
-  color: #3a6b75;
-  border: 1px solid rgba(135, 182, 188, 0.4);
+.badge-react, .badge-python, .badge-ui {
+  background: var(--periwinkle-lt);
+  color: #3b49ab;
+  border: 1px solid var(--periwinkle);
 }
 
-.badge-html {
-  background: linear-gradient(135deg, rgba(246, 240, 159, 0.3) 0%, rgba(246, 240, 159, 0.15) 100%);
-  color: #9a8c00;
-  border: 1px solid rgba(246, 240, 159, 0.5);
+.badge-html, .badge-database, .badge-graphic {
+  background: var(--marigold-lt);
+  color: #7a4f00;
+  border: 1px solid var(--marigold);
 }
 
-.badge-javascript {
-  background: linear-gradient(135deg, rgba(179, 86, 86, 0.25) 0%, rgba(179, 86, 86, 0.1) 100%);
-  color: #6b2d2d;
-  border: 1px solid rgba(179, 86, 86, 0.4);
+.badge-javascript, .badge-api, .badge-canva {
+  background: var(--lavender);
+  color: #723485;
+  border: 1px solid var(--lavender-dk);
 }
 
-.badge-node {
-  background: linear-gradient(135deg, rgba(62, 44, 35, 0.25) 0%, rgba(62, 44, 35, 0.1) 100%);
-  color: #2a1e17;
-  border: 1px solid rgba(62, 44, 35, 0.4);
-}
-
-.badge-python {
-  background: linear-gradient(135deg, rgba(135, 182, 188, 0.25) 0%, rgba(135, 182, 188, 0.1) 100%);
-  color: #3a6b75;
-  border: 1px solid rgba(135, 182, 188, 0.4);
-}
-
-.badge-database {
-  background: linear-gradient(135deg, rgba(246, 240, 159, 0.3) 0%, rgba(246, 240, 159, 0.15) 100%);
-  color: #9a8c00;
-  border: 1px solid rgba(246, 240, 159, 0.5);
-}
-
-.badge-api {
-  background: linear-gradient(135deg, rgba(179, 86, 86, 0.25) 0%, rgba(179, 86, 86, 0.1) 100%);
-  color: #6b2d2d;
-  border: 1px solid rgba(179, 86, 86, 0.4);
-}
-
-.badge-figma {
-  background: linear-gradient(135deg, rgba(62, 44, 35, 0.25) 0%, rgba(62, 44, 35, 0.1) 100%);
-  color: #2a1e17;
-  border: 1px solid rgba(62, 44, 35, 0.4);
-}
-
-.badge-ui {
-  background: linear-gradient(135deg, rgba(135, 182, 188, 0.25) 0%, rgba(135, 182, 188, 0.1) 100%);
-  color: #3a6b75;
-  border: 1px solid rgba(135, 182, 188, 0.4);
-}
-
-.badge-graphic {
-  background: linear-gradient(135deg, rgba(246, 240, 159, 0.3) 0%, rgba(246, 240, 159, 0.15) 100%);
-  color: #9a8c00;
-  border: 1px solid rgba(246, 240, 159, 0.5);
-}
-
-.badge-canva {
-  background: linear-gradient(135deg, rgba(179, 86, 86, 0.25) 0%, rgba(179, 86, 86, 0.1) 100%);
-  color: #6b2d2d;
-  border: 1px solid rgba(179, 86, 86, 0.4);
+.badge-node, .badge-figma {
+  background: var(--olive-lt);
+  color: #4a4500;
+  border: 1px solid var(--olive);
 }
 
 /* Responsive */
